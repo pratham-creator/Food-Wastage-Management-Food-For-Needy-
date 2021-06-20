@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Food For Needy</string>
+    <string-array name="spinner_items">
+        <item>Donor</item>
+        <item>Receiver</item>
+    </string-array>
+
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+</resources>

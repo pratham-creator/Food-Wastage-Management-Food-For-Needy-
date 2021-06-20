@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/registerimage"
+    >
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/login_imageView"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/rounded_image_selector"
+        android:padding="20dp"
+        android:src="@drawable/ic_camera"
+        android:tooltipText="Select Image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.AppCompatImageView>
+
+    <EditText
+        android:id="@+id/register_email"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="192dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:ems="10"
+        android:drawableLeft="@drawable/ic_email"
+        android:hint="  Email"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/register_password"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:drawableLeft="@drawable/ic_lock"
+        android:hint="  Password"
+        android:inputType="textPassword"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/register_email"
+        app:layout_constraintStart_toStartOf="@+id/register_email"
+        app:layout_constraintTop_toBottomOf="@+id/register_email" />
+
+    <Button
+        android:id="@+id/register_button"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_button"
+        android:text="Register"
+        android:textColor="@color/white"
+        android:textSize="21dp"
+        android:textStyle="bold"
+        app:backgroundTint="#FF9800"
+        app:layout_constraintEnd_toEndOf="@+id/donor_district"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/donor_district"
+        app:layout_constraintTop_toBottomOf="@+id/donor_district" />
+
+    <TextView
+        android:id="@+id/already_have_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="24dp"
+        android:text="Already have an account?"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textColorHint="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/register_button"
+        app:layout_constraintStart_toStartOf="@+id/register_button"
+        app:layout_constraintTop_toBottomOf="@+id/register_button" />
+
+    <Spinner
+        android:id="@+id/register_spinner"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:textColorHint="@color/black"
+        android:entries="@array/spinner_items"
+        app:layout_constraintEnd_toEndOf="@+id/register_password"
+        app:layout_constraintStart_toStartOf="@+id/register_password"
+        app:layout_constraintTop_toBottomOf="@+id/register_password" />
+
+    <EditText
+        android:id="@+id/donor_name"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:textColorHint="@color/black"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:drawableLeft="@drawable/ic_person"
+        android:hint="  Donor/NGO Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/register_spinner"
+        app:layout_constraintStart_toStartOf="@+id/register_spinner"
+        app:layout_constraintTop_toBottomOf="@+id/register_spinner" />
+
+    <EditText
+        android:id="@+id/donor_district"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:drawableLeft="@drawable/ic_location"
+        android:hint="  City"
+        android:textColorHint="@color/black"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/donor_mobile"
+        app:layout_constraintStart_toStartOf="@+id/donor_mobile"
+        app:layout_constraintTop_toBottomOf="@+id/donor_mobile" />
+
+    <EditText
+        android:id="@+id/donor_mobile"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="  Mobile No."
+        android:drawableLeft="@drawable/ic_phone"
+        android:inputType="phone"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/donor_name"
+        app:layout_constraintStart_toStartOf="@+id/donor_name"
+        app:layout_constraintTop_toBottomOf="@+id/donor_name" />
+
+    <RelativeLayout
+        android:id="@+id/reg_progressBar_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/progressbar_background"
+        android:elevation="10dp"
+        android:padding="20dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

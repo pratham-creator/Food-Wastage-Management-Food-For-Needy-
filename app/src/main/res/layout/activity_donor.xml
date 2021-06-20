@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer"
+    android:fitsSystemWindows="true">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DonorActivity"
+    android:background="@drawable/background_of_ui">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/donor_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#85DABF"
+            app:title="Donor"></androidx.appcompat.widget.Toolbar>
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/donor_name"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:ems="10"
+        android:hint="Donor Name"
+        android:textColorHint="@color/black"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_imageView" />
+
+    <EditText
+        android:id="@+id/donor_district"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="City"
+        android:textColorHint="@color/black"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/donor_mobile"
+        app:layout_constraintStart_toStartOf="@+id/donor_mobile"
+        app:layout_constraintTop_toBottomOf="@+id/donor_mobile" />
+
+    <EditText
+        android:id="@+id/donor_mobile"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Mobile No."
+        android:textColorHint="@color/black"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="@+id/donor_name"
+        app:layout_constraintStart_toStartOf="@+id/donor_name"
+        app:layout_constraintTop_toBottomOf="@+id/donor_name" />
+
+    <EditText
+        android:id="@+id/donor_address"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="address"
+        android:textColorHint="@color/black"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="@+id/donor_district"
+        app:layout_constraintStart_toStartOf="@+id/donor_district"
+        app:layout_constraintTop_toBottomOf="@+id/donor_district" />
+
+    <EditText
+        android:id="@+id/donor_food_amount"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:textColorHint="@color/black"
+        android:hint="approx. food for how many people"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/donor_address"
+        app:layout_constraintStart_toStartOf="@+id/donor_address"
+        app:layout_constraintTop_toBottomOf="@+id/donor_address" />
+
+
+    <TextView
+        android:id="@+id/food_details_food_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="DONATION"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="36sp"
+        android:textColorHint="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/login_imageView"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/ic_camera"
+        android:padding="20dp"
+        android:background="@drawable/rounded_image_selector"
+        android:tooltipText="Select Image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/food_details_food_info"
+        app:layout_constraintVertical_bias="0.02"
+        ></androidx.appcompat.widget.AppCompatImageView>
+
+
+    <EditText
+        android:id="@+id/donor_food_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="32dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Enter Food Details"
+        android:inputType="textMultiLine"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/donor_food_amount"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/donor_food_amount"
+        app:layout_constraintTop_toBottomOf="@+id/donor_food_amount"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/donor_button"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/rounded_button"
+        android:text="submit"
+        android:textColor="@color/white"
+        android:textSize="21dp"
+        android:textStyle="bold"
+        app:backgroundTint="#FF9800"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/donor_food_info"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/donor_food_info"
+        app:layout_constraintTop_toBottomOf="@+id/donor_food_info"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <RelativeLayout
+        android:id="@+id/progressBar_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/progressbar_background"
+        android:elevation="10dp"
+        android:padding="20dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:id="@+id/donor_progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Provide Food Image Here"
+        android:textColor="#FDFCFC"
+        app:layout_constraintBottom_toTopOf="@+id/login_imageView"
+        app:layout_constraintEnd_toEndOf="@+id/login_imageView"
+        app:layout_constraintStart_toStartOf="@+id/login_imageView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navmenu"
+        android:layout_width="wrap_content"
+
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.572"
+        app:menu="@menu/iconmenu"
+        android:layout_height="match_parent"></com.google.android.material.navigation.NavigationView>
+</androidx.drawerlayout.widget.DrawerLayout>

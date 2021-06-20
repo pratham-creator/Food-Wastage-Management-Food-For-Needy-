@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:background="@drawable/ic_launcher_foreground"
+
+    card_view:cardCornerRadius="20dp"
+    card_view:cardElevation="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFFFF">
+
+        <TextView
+            android:id="@+id/donations_res_mobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="288dp"
+            android:layout_marginRight="288dp"
+            android:text="TextView"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            card_view:layout_constraintEnd_toEndOf="@+id/donations_res_name"
+            card_view:layout_constraintHorizontal_bias="0.0"
+            card_view:layout_constraintStart_toStartOf="@+id/donations_res_name"
+            card_view:layout_constraintTop_toBottomOf="@+id/donations_res_name" />
+
+        <TextView
+            android:id="@+id/donations_res_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="TextView"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            card_view:layout_constraintEnd_toEndOf="@+id/donations_res_mobile"
+            card_view:layout_constraintHorizontal_bias="0.0"
+            card_view:layout_constraintStart_toStartOf="@+id/donations_res_mobile"
+            card_view:layout_constraintTop_toBottomOf="@+id/donations_res_mobile" />
+
+        <TextView
+            android:id="@+id/donations_res_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="TextView"
+            android:textColor="#F44336"
+            android:textSize="20dp"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintHorizontal_bias="0.121"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/donations_res_food_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="TextView"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+
+            card_view:layout_constraintEnd_toEndOf="@+id/donations_res_address"
+            card_view:layout_constraintHorizontal_bias="0.0"
+            card_view:layout_constraintStart_toStartOf="@+id/donations_res_address"
+            card_view:layout_constraintTop_toBottomOf="@+id/donations_res_address"
+            card_view:layout_constraintVertical_bias="0.027" />
+
+        <TextView
+            android:id="@+id/donations_people"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="People"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            card_view:layout_constraintBottom_toBottomOf="@+id/donations_res_food_amount"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintHorizontal_bias="0.114"
+            card_view:layout_constraintStart_toEndOf="@+id/donations_res_food_amount"
+            card_view:layout_constraintTop_toBottomOf="@+id/donations_res_address"
+            card_view:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/donations_accept_request"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="13dp"
+            android:background="@drawable/rounded_button"
+            android:text="Accept Request"
+            android:textColor="#F8F7F7"
+            android:textSize="18sp"
+            android:textStyle="bold"
+
+            card_view:backgroundTint="#FF9800"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@+id/donations_people" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
