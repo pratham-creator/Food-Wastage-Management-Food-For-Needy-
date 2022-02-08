@@ -10,6 +10,7 @@ Receiver : See the requests of donation
 
 Feature :
 1)Donation requests gets automatically deleted from database after 1 day, sinice the food will rot after 1 day.
+
 2)User can see his donation count
 
 Technology Stack:
